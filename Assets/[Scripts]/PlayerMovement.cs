@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] LayerMask groundLayer;
+    public LayerMask groundLayer;
     
     public float gravity = -50f;
     private CharacterController controller;
     private Vector3 velocity;
     private bool isGrounded;
     private float horiInput;
-    public float moveSpeed = 5;
+    public float moveSpeed = 5f;
+    public float jumpForce = 2f;
+
+    private bool isJumpPressed;
+    private float jumpTimer;
+    private float jumpGraceTime = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +50,25 @@ public class PlayerMovement : MonoBehaviour
 
         // Move character controller horizontally
         controller.Move(new Vector3(horiInput * moveSpeed, 0, 0) * Time.deltaTime);
+
+        // Jumping Logic
+        isJumpPressed = Input.GetKeyDown(KeyCode.Space);
+
+        if (isJumpPressed)
+        {
+            jumpTimer = Time.time;
+        }
+
+        if (isGrounded && (isJumpPressed || (jumpTimer > 0 && Time.time < jumpTimer + jumpGraceTime)))
+        {
+            velocity.y += Mathf.Sqrt(jumpForce * -2 * gravity);
+            jumpTimer = -1;
+        }
+
+        /*if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            velocity.y += Mathf.Sqrt(jumpForce * -2 * gravity);
+        }*/
 
         // Vertical Velocity
         controller.Move(velocity * Time.deltaTime);
