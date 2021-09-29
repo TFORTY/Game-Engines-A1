@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 66082666397436153}
   - component: {fileID: 6863692842780385715}
   - component: {fileID: 4270051954691652592}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 5657414240433791806}
   - component: {fileID: 5657414240433791807}
   - component: {fileID: 5657414240433791804}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 5657414240559134665}
   - component: {fileID: 5657414240559134670}
   - component: {fileID: 5657414240559134671}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 5657414240568668499}
   - component: {fileID: 5657414240568668496}
   - component: {fileID: 5657414240568668497}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5657414240738948466}
-  m_Layer: 3
+  - component: {fileID: 4699714063831288772}
+  m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,6 +433,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &4699714063831288772
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5657414240738948467}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5657414241078068716
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +461,7 @@ GameObject:
   - component: {fileID: 5657414241078068712}
   - component: {fileID: 5657414241078068713}
   - component: {fileID: 5657414241078068718}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +557,7 @@ GameObject:
   - component: {fileID: 5657414241517661388}
   - component: {fileID: 5657414241517661389}
   - component: {fileID: 5657414241517661378}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +653,7 @@ GameObject:
   - component: {fileID: 5657414241559247072}
   - component: {fileID: 5657414241559247073}
   - component: {fileID: 5657414241559247078}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +749,7 @@ GameObject:
   - component: {fileID: 5657414241618598561}
   - component: {fileID: 5657414241618598566}
   - component: {fileID: 5657414241618598567}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,7 +845,7 @@ GameObject:
   - component: {fileID: 5657414241817936890}
   - component: {fileID: 5657414241817936891}
   - component: {fileID: 5657414241817936888}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -924,7 +941,7 @@ GameObject:
   - component: {fileID: 5657414241819419998}
   - component: {fileID: 5657414241819419999}
   - component: {fileID: 5657414241819419996}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1020,7 +1037,7 @@ GameObject:
   - component: {fileID: 5657414241947720762}
   - component: {fileID: 5657414241947720763}
   - component: {fileID: 5657414241947720760}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,7 +1133,7 @@ GameObject:
   - component: {fileID: 5657414241950179482}
   - component: {fileID: 5657414241950179483}
   - component: {fileID: 5657414241950179480}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,7 +1229,7 @@ GameObject:
   - component: {fileID: 5657414242016395278}
   - component: {fileID: 5657414242016395279}
   - component: {fileID: 5657414242016395276}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1308,7 +1325,7 @@ GameObject:
   - component: {fileID: 5657414242087782510}
   - component: {fileID: 5657414242087782511}
   - component: {fileID: 5657414242087782508}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1421,7 @@ GameObject:
   - component: {fileID: 5657414242254329885}
   - component: {fileID: 5657414242254329874}
   - component: {fileID: 5657414242254329875}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1500,7 +1517,7 @@ GameObject:
   - component: {fileID: 5657414242287986452}
   - component: {fileID: 5657414242287986453}
   - component: {fileID: 5657414242287986442}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1596,7 +1613,7 @@ GameObject:
   - component: {fileID: 5657414242366286652}
   - component: {fileID: 5657414242366286653}
   - component: {fileID: 5657414242366286642}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Land (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1692,7 +1709,7 @@ GameObject:
   - component: {fileID: 5657414242368179197}
   - component: {fileID: 5657414242368179186}
   - component: {fileID: 5657414242368179187}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
