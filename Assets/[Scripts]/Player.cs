@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public LayerMask groundLayer;
     
@@ -65,12 +66,29 @@ public class PlayerMovement : MonoBehaviour
             jumpTimer = -1;
         }
 
-        /*if (isGrounded && Input.GetKeyDown(KeyCode.Space))
-        {
-            velocity.y += Mathf.Sqrt(jumpForce * -2 * gravity);
-        }*/
-
         // Vertical Velocity
         controller.Move(velocity * Time.deltaTime);
+
+        // Restarts the game
+        Restart();
+
+        // Goes to win screen
+        Win();
+    }
+
+    void Restart()
+    {
+        if (transform.position.y <= -10f)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
+    }
+
+    void Win()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 }

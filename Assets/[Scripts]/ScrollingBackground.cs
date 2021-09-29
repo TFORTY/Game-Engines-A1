@@ -6,6 +6,7 @@ public class ScrollingBackground : MonoBehaviour
 {
     public float scrollSpeed = -5f;
     private Vector3 startPos;
+    public float maxLoopLength = 20f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class ScrollingBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float newPos = Mathf.Repeat(Time.time * scrollSpeed, 20);
+        float newPos = Mathf.Repeat(Time.time * scrollSpeed, maxLoopLength);
         transform.position = startPos + Vector3.right * newPos;
     }
 }
