@@ -687,7 +687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8029646184603197266}
-  - component: {fileID: 5611399986083470849}
+  - component: {fileID: 4614158956805308065}
   - component: {fileID: -5403222211382296339}
   m_Layer: 0
   m_Name: Asteroid
@@ -718,7 +718,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &5611399986083470849
+--- !u!54 &4614158956805308065
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -749,7 +749,7 @@ MonoBehaviour:
   xSpeed: 5
   ySpeed: 20
   zSpeed: 10
-  moveSpeed: 20
+  moveSpeed: 10
 --- !u!1 &8029646184628079058
 GameObject:
   m_ObjectHideFlags: 0

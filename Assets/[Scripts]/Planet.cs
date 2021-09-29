@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Asteroid : MonoBehaviour
+public class Planet : MonoBehaviour
 {
     public float xSpeed = 0f;
     public float ySpeed = 0f;
     public float zSpeed = 0f;
     public float moveSpeed = 10f;
     private float screenOffset = 50f;
+    private float horiInput;
 
     private Rigidbody rb;
     private Vector3 screenBounds;

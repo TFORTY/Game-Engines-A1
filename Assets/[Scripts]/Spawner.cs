@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject asteroidPrefab;
+    public GameObject planetPrefab;
     public float respawnTime = 1f;
     public float spawnLocation = -10f;
     public float minY = 0f;
@@ -14,26 +14,27 @@ public class Spawner : MonoBehaviour
     private Vector3 screenBounds;
 
     public GameObject player;
+    public float spawnOffset = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        StartCoroutine(asteroidWave());
+        StartCoroutine(planetWave());
     }
 
-    private void spawnEnemy()
+    private void spawnPlanet()
     {
-        GameObject a = Instantiate(asteroidPrefab) as GameObject;
-        a.transform.position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
+        GameObject a = Instantiate(planetPrefab) as GameObject;
+        a.transform.position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
     }
 
-    IEnumerator asteroidWave()
+    IEnumerator planetWave()
     {
         while(true)
         {
             yield return new WaitForSeconds(respawnTime);
-            spawnEnemy();
+            spawnPlanet();
         }  
     }
 }
