@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Planet : MonoBehaviour
+public class Asteroid : MonoBehaviour
 {
     public float xSpeed = 0f;
     public float ySpeed = 0f;
