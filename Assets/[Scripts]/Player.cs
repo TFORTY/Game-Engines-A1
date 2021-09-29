@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private float jumpTimer;
     private float jumpGraceTime = 0.2f;
 
+    private bool hasWon = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,14 +71,22 @@ public class Player : MonoBehaviour
         // Vertical Velocity
         controller.Move(velocity * Time.deltaTime);
 
-        // Restarts the game
-        Restart();
+        // Goes to lose screen
+        Lose();
 
         // Goes to win screen
         Win();
+
+        // Retarts the game
+        Restart();
+
+        if (hasWon)
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 
-    void Restart()
+    void Lose()
     {
         if (transform.position.y <= -10f)
         {
@@ -89,6 +99,23 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             SceneManager.LoadScene("WinScreen");
+        }
+    }
+
+    void Restart()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Game");
+        }
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Finish"))
+        {
+            Debug.Log("Collision with Finish");
+            hasWon = true;
         }
     }
 }
