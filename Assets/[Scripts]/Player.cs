@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
     public LayerMask groundLayer;
     public LayerMask finishLayer;
+    public LayerMask redLayer;
 
     public float gravity = -50f;
     private CharacterController controller;
@@ -20,7 +21,12 @@ public class Player : MonoBehaviour
     private float jumpTimer;
     private float jumpGraceTime = 0.2f;
 
+    private float score;
+
     private bool isFinished;
+    private bool isRed;
+
+    private bool isColorRed;
 
     // Start is called before the first frame update
     void Start()
@@ -69,10 +75,33 @@ public class Player : MonoBehaviour
             jumpTimer = -1;
         }
 
+        if (Input.GetKey(KeyCode.I))
+        {
+            isColorRed = true;
+            score++;
+        }
+        else
+        {
+            isColorRed = false;
+        }
+
+
         // Vertical Velocity
         controller.Move(velocity * Time.deltaTime);
 
+        // Checks if player collided with finish platform
         isFinished = Physics.CheckSphere(transform.position, 0.1f, finishLayer, QueryTriggerInteraction.Collide);
+
+        isRed = Physics.CheckSphere(transform.position, 0.1f, redLayer, QueryTriggerInteraction.Ignore);
+
+        if (isRed && isColorRed)
+        {
+            Debug.Log("IS RED");
+        }
+        else if (isRed && !isColorRed)
+        {
+            Debug.Log("NOT RED");          
+        }
 
         // Goes to lose screen
         Lose();
