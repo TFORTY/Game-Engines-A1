@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MaterialLERP : MonoBehaviour
 {
+    // Material Attributes
     public Material mat1;
     public Material mat2;
     public float duration = 2f;
@@ -20,6 +21,7 @@ public class MaterialLERP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Lerps the colour of the object based on two materials provided
         float lerp = Mathf.PingPong(Time.time, duration) / duration;
         rend.material.Lerp(mat1, mat2, lerp);
     }

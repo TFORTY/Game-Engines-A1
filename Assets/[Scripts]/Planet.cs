@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
+    // Planet attributes
     public float xSpeed = 0f;
     public float ySpeed = 0f;
     public float zSpeed = 0f;

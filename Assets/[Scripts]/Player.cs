@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    // Layer Masks to detect collisions
     public LayerMask groundLayer;
     public LayerMask finishLayer;
     public LayerMask redLayer;
     public LayerMask blueLayer;
     public LayerMask yellowLayer;
 
+    // Character Attributes
     public float gravity = -50f;
     private CharacterController controller;
     private Vector3 velocity;
@@ -20,13 +22,16 @@ public class Player : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 2f;
 
+    // Jumping Attributes
     private bool isJumpPressed;
     private float jumpTimer;
     private float jumpGraceTime = 0.2f;
 
+    // Score Attributes
     private float score;
     public Text scoreText;
 
+    // Bools
     private bool isFinished;
     private bool isRed;
     private bool isBlue;
@@ -36,6 +41,7 @@ public class Player : MonoBehaviour
     private bool isColourBlue;
     private bool isColourYellow;
 
+    // Player components
     public GameObject playerObject;
     public Material redMat;
     public Material blueMat;
@@ -109,6 +115,7 @@ public class Player : MonoBehaviour
 
     void Lose()
     {
+        // If the player falls below a certain y-value send the player to lose screen
         if (transform.position.y <= -10f)
         {
             SceneManager.LoadScene("LoseScreen");
@@ -117,11 +124,6 @@ public class Player : MonoBehaviour
 
     void Win()
     {
-        //if (Input.GetKeyDown(KeyCode.W))
-        //{
-        //    SceneManager.LoadScene("WinScreen");
-        //}
-
         // Checks if player collided with finish platform
         isFinished = Physics.CheckSphere(transform.position, 0.1f, finishLayer, QueryTriggerInteraction.Collide);
 
@@ -134,6 +136,7 @@ public class Player : MonoBehaviour
 
     void Restart()
     {
+        // Restarts the game by reloading the game scene
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("Game");
@@ -147,6 +150,7 @@ public class Player : MonoBehaviour
         isBlue = Physics.CheckSphere(transform.position, 0.1f, blueLayer, QueryTriggerInteraction.Ignore);
         isYellow = Physics.CheckSphere(transform.position, 0.1f, yellowLayer, QueryTriggerInteraction.Ignore);
 
+        // Switches player colour depending on input
         if (Input.GetKeyDown(KeyCode.I))
         {
             isColourRed = true;
@@ -172,12 +176,13 @@ public class Player : MonoBehaviour
 
     void CalculateScore()
     {
+        // Updates the score
         scoreText.text = score.ToString("0");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        //Calculate Score
+        // Player gets score added if they match the colour to the correct platform on collision
         if (isRed && isColourRed)
         {
             score++;

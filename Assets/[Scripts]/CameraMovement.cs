@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    // Camera Attributes
     public Transform target = null;
 
     private Vector3 offset;
@@ -17,6 +18,7 @@ public class CameraMovement : MonoBehaviour
 
     private void LateUpdate()
     {
+        // Makes the camera follow the transform of the player smoothly
         transform.position = Vector3.Lerp(transform.position, new Vector3(target.position.x, 0, target.position.z) + offset, Time.deltaTime * cameraSpeed);
     }
 }

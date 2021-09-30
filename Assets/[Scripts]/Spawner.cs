@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    // Spawner attributes
     public GameObject planetPrefab;
     public float respawnTime = 1f;
     public float spawnLocation = -10f;
@@ -25,12 +26,14 @@ public class Spawner : MonoBehaviour
 
     private void spawnPlanet()
     {
+        // Spawn a planet at a random y and z while making sure they start to spawn away from the player
         GameObject a = Instantiate(planetPrefab) as GameObject;
         a.transform.position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
     }
 
     IEnumerator planetWave()
     {
+        // Spawns planets at every interval
         while(true)
         {
             yield return new WaitForSeconds(respawnTime);
