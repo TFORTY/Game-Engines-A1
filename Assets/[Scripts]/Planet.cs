@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// References Used:
+// https://answers.unity.com/questions/176311/auto-rotating-script.html
+
 public class Planet : MonoBehaviour
 {
     // Planet attributes

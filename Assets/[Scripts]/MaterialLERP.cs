@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// References Used:
+// https://docs.unity3d.com/ScriptReference/Material.Lerp.html
+
 public class MaterialLERP : MonoBehaviour
 {
     // Material Attributes

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// References Used:
+// https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
+// https://docs.unity3d.com/ScriptReference/Coroutine.html
+
 public class Spawner : MonoBehaviour
 {
     // Spawner attributes

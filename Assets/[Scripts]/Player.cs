@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+// References Used:
+// https://docs.unity3d.com/ScriptReference/QueryTriggerInteraction.html
+// https://docs.unity3d.com/ScriptReference/CharacterController.html
+// https://docs.unity3d.com/ScriptReference/Physics.html
+
 public class Player : MonoBehaviour
 {
     // Layer Masks to detect collisions
