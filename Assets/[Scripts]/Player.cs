@@ -144,8 +144,8 @@ public class Player : MonoBehaviour
     {
         // Checks what colour platform the player is on
         isRed = Physics.CheckSphere(transform.position, 0.1f, redLayer, QueryTriggerInteraction.Ignore);
-        isBlue = Physics.CheckSphere(transform.position, 0.1f, blueLayer, QueryTriggerInteraction.Collide);
-        isYellow = Physics.CheckSphere(transform.position, 0.1f, yellowLayer, QueryTriggerInteraction.Collide);
+        isBlue = Physics.CheckSphere(transform.position, 0.1f, blueLayer, QueryTriggerInteraction.Ignore);
+        isYellow = Physics.CheckSphere(transform.position, 0.1f, yellowLayer, QueryTriggerInteraction.Ignore);
 
         if (Input.GetKeyDown(KeyCode.I))
         {
@@ -169,52 +169,51 @@ public class Player : MonoBehaviour
             isColourBlue = false;
         }
 
-        if (isRed && isColourRed)
-        {
-            Debug.Log("IS RED");
-        }
-        else if (isRed && !isColourRed)
-        {
-            Debug.Log("NOT RED");
-        }
-        else if (isBlue && isColourBlue)
-        {
-            Debug.Log("IS BLUE");
-        }
-        else if (isBlue && !isColourBlue)
-        {
-            Debug.Log("NOT BLUE");
-        }
-        else if (isYellow && isColourYellow)
-        {
-            Debug.Log("IS YELLOW");
-        }
-        else if (isYellow && !isColourYellow)
-        {
-            Debug.Log("NOT YELLOW");
-        }
+        //if (isRed && isColourRed)
+        //{
+        //    Debug.Log("IS RED");
+        //}
+        //else if (isRed && !isColourRed)
+        //{
+        //    Debug.Log("NOT RED");
+        //}
+        //else if (isBlue && isColourBlue)
+        //{
+        //    Debug.Log("IS BLUE");
+        //}
+        //else if (isBlue && !isColourBlue)
+        //{
+        //    Debug.Log("NOT BLUE");
+        //}
+        //else if (isYellow && isColourYellow)
+        //{
+        //    Debug.Log("IS YELLOW");
+        //}
+        //else if (isYellow && !isColourYellow)
+        //{
+        //    Debug.Log("NOT YELLOW");
+        //}
     }
 
     void CalculateScore()
     {
-        //if (isRed && isColourRed)
-        //{
-        //    // hasScored = true;
-        //    //isRed = false;
-        //    //Physics.IgnoreLayerCollision(0, 7);
-        //    score++;
-        //}
-
-        //if (hasScored)
-        //{
-        //    score++;
-        //    hasScored = false;
-        //}
-
-        //scoreText.text = Time.time.ToString("0");
         scoreText.text = score.ToString("0");
     }
 
-
-
+    private void OnTriggerEnter(Collider other)
+    {
+        //Calculate Score
+        if (isRed && isColourRed)
+        {
+            score++;
+        }
+        else if (isBlue && isColourBlue)
+        {
+            score++;
+        }
+        if (isYellow && isColourYellow)
+        {
+            score++;
+        }
+    }
 }
