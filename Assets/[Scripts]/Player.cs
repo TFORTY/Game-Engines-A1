@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     public LayerMask finishLayer;
     public LayerMask redLayer;
     public LayerMask blueLayer;
-    public LayerMask yellowMask;
-    public LayerMask greyMask;
+    public LayerMask yellowLayer;
+    public LayerMask greyLayer;
 
     public float gravity = -50f;
     private CharacterController controller;
@@ -30,10 +30,12 @@ public class Player : MonoBehaviour
     private bool isRed;
     private bool isBlue;
     private bool isYellow;
+    private bool isGrey;
 
     private bool isColorRed;
     private bool isColorBlue;
     private bool isColorYellow;
+    private bool isColorGrey;
 
     public GameObject playerObject;
     public Material playerMat;
@@ -92,7 +94,6 @@ public class Player : MonoBehaviour
         {
             isColorRed = true;
             playerObject.GetComponent<Renderer>().material = redMat;
-            //score++;
         }
         else if (Input.GetKeyDown(KeyCode.O))
         {
@@ -119,6 +120,9 @@ public class Player : MonoBehaviour
         isFinished = Physics.CheckSphere(transform.position, 0.1f, finishLayer, QueryTriggerInteraction.Collide);
 
         isRed = Physics.CheckSphere(transform.position, 0.1f, redLayer, QueryTriggerInteraction.Ignore);
+        isBlue = Physics.CheckSphere(transform.position, 0.1f, blueLayer, QueryTriggerInteraction.Ignore);
+        isYellow = Physics.CheckSphere(transform.position, 0.1f, yellowLayer, QueryTriggerInteraction.Ignore);
+        isGrey = Physics.CheckSphere(transform.position, 0.1f, greyLayer, QueryTriggerInteraction.Ignore);
 
         if (isRed && isColorRed)
         {
@@ -127,6 +131,33 @@ public class Player : MonoBehaviour
         else if (isRed && !isColorRed)
         {
             Debug.Log("NOT RED");          
+        }
+
+        if (isBlue && isColorBlue)
+        {
+            Debug.Log("IS BLUE");
+        }
+        else if (isBlue && !isColorBlue)
+        {
+            Debug.Log("NOT BLUE");
+        }
+
+        if (isYellow && isColorYellow)
+        {
+            Debug.Log("IS Yellow");
+        }
+        else if (isYellow && !isColorYellow)
+        {
+            Debug.Log("NOT Yellow");
+        }
+
+        if (isGrey && isColorGrey)
+        {
+            Debug.Log("IS Grey");
+        }
+        else if (isGrey && !isColorGrey)
+        {
+            Debug.Log("NOT Grey");
         }
 
         // Goes to lose screen
