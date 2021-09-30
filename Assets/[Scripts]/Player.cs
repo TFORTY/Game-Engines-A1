@@ -168,31 +168,6 @@ public class Player : MonoBehaviour
             isColourRed = false;
             isColourBlue = false;
         }
-
-        //if (isRed && isColourRed)
-        //{
-        //    Debug.Log("IS RED");
-        //}
-        //else if (isRed && !isColourRed)
-        //{
-        //    Debug.Log("NOT RED");
-        //}
-        //else if (isBlue && isColourBlue)
-        //{
-        //    Debug.Log("IS BLUE");
-        //}
-        //else if (isBlue && !isColourBlue)
-        //{
-        //    Debug.Log("NOT BLUE");
-        //}
-        //else if (isYellow && isColourYellow)
-        //{
-        //    Debug.Log("IS YELLOW");
-        //}
-        //else if (isYellow && !isColourYellow)
-        //{
-        //    Debug.Log("NOT YELLOW");
-        //}
     }
 
     void CalculateScore()
@@ -206,14 +181,17 @@ public class Player : MonoBehaviour
         if (isRed && isColourRed)
         {
             score++;
+            Debug.Log("RED HIT");
         }
-        else if (isBlue && isColourBlue)
+        if (isBlue && isColourBlue)
         {
             score++;
+            Debug.Log("BLUE HIT");
         }
         if (isYellow && isColourYellow)
         {
             score++;
+            Debug.Log("YELLOW HIT");
         }
     }
 }

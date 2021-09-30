@@ -1662,7 +1662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2758632471493748099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.89, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2758632469785337611}
@@ -1717,12 +1717,12 @@ MonoBehaviour:
     m_Bits: 0
   gravity: -50
   moveSpeed: 7
-  jumpForce: 2
+  jumpForce: 2.2
   scoreText: {fileID: 0}
   playerObject: {fileID: 0}
-  redMat: {fileID: 0}
-  blueMat: {fileID: 0}
-  yellowMat: {fileID: 0}
+  redMat: {fileID: 2100000, guid: 3eaed090922c30f46b932cb79750513d, type: 2}
+  blueMat: {fileID: 2100000, guid: b53edb4585749374d9128496af29286d, type: 2}
+  yellowMat: {fileID: 2100000, guid: 2280ef0f6821db148bd6446e2a753f52, type: 2}
 --- !u!54 &4163458855638000462
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1737,8 +1737,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &2758632471531404302
 GameObject:
   m_ObjectHideFlags: 0
