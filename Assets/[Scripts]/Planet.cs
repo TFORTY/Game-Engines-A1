@@ -10,7 +10,6 @@ public class Planet : MonoBehaviour
     public float zSpeed = 0f;
     public float moveSpeed = 10f;
     private float screenOffset = 50f;
-    private float horiInput;
 
     private Rigidbody rb;
     private Vector3 screenBounds;
