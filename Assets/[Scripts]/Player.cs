@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     public LayerMask redLayer;
     public LayerMask blueLayer;
     public LayerMask yellowLayer;
-    public LayerMask greyLayer;
 
     public float gravity = -50f;
     private CharacterController controller;
@@ -32,20 +31,15 @@ public class Player : MonoBehaviour
     private bool isRed;
     private bool isBlue;
     private bool isYellow;
-    private bool isGrey;
 
-    private bool isColorRed;
-    private bool isColorBlue;
-    private bool isColorYellow;
-    private bool isColorGrey;
+    private bool isColourRed;
+    private bool isColourBlue;
+    private bool isColourYellow;
 
     public GameObject playerObject;
-    public Material playerMat;
     public Material redMat;
     public Material blueMat;
     public Material yellowMat;
-
-    private bool canSwitchColor = false;
 
     // Start is called before the first frame update
     void Start()
@@ -150,75 +144,77 @@ public class Player : MonoBehaviour
     {
         // Checks what colour platform the player is on
         isRed = Physics.CheckSphere(transform.position, 0.1f, redLayer, QueryTriggerInteraction.Ignore);
-        isBlue = Physics.CheckSphere(transform.position, 0.1f, blueLayer, QueryTriggerInteraction.Ignore);
-        isYellow = Physics.CheckSphere(transform.position, 0.1f, yellowLayer, QueryTriggerInteraction.Ignore);
-        isGrey = Physics.CheckSphere(transform.position, 0.1f, greyLayer, QueryTriggerInteraction.Ignore);
+        isBlue = Physics.CheckSphere(transform.position, 0.1f, blueLayer, QueryTriggerInteraction.Collide);
+        isYellow = Physics.CheckSphere(transform.position, 0.1f, yellowLayer, QueryTriggerInteraction.Collide);
 
         if (Input.GetKeyDown(KeyCode.I))
         {
-            isColorRed = true;
+            isColourRed = true;
             playerObject.GetComponent<Renderer>().material = redMat;
+            isColourBlue = false;
+            isColourYellow = false;
         }
         else if (Input.GetKeyDown(KeyCode.O))
         {
-            isColorBlue = true;
+            isColourBlue = true;
             playerObject.GetComponent<Renderer>().material = blueMat;
+            isColourRed = false;
+            isColourYellow = false;
         }
         else if (Input.GetKeyDown(KeyCode.P))
         {
-            isColorYellow = true;
+            isColourYellow = true;
             playerObject.GetComponent<Renderer>().material = yellowMat;
+            isColourRed = false;
+            isColourBlue = false;
         }
 
-        //if (isGrey)
-        //{
-        //    playerObject.GetComponent<Renderer>().material = playerMat;
-        //}
-
-        //if (isGrey && canSwitchColor)
-        //{
-        //    isColorGrey = true;
-        //    playerObject.GetComponent<Renderer>().material = playerMat;
-        //    canSwitchColor = true;
-        //}
-        //else
-        //{
-        //    canSwitchColor = false;
-        //}
-
-        if (isRed && isColorRed)
+        if (isRed && isColourRed)
         {
             Debug.Log("IS RED");
         }
-        else if (isRed && !isColorRed)
+        else if (isRed && !isColourRed)
         {
             Debug.Log("NOT RED");
         }
-        else if (isBlue && isColorBlue)
+        else if (isBlue && isColourBlue)
         {
             Debug.Log("IS BLUE");
         }
-        else if (isBlue && !isColorBlue)
+        else if (isBlue && !isColourBlue)
         {
             Debug.Log("NOT BLUE");
-        } 
-        else if (isYellow && isColorYellow)
+        }
+        else if (isYellow && isColourYellow)
         {
             Debug.Log("IS YELLOW");
         }
-        else if (isYellow && !isColorYellow)
+        else if (isYellow && !isColourYellow)
         {
             Debug.Log("NOT YELLOW");
-        }
-       
-        else if (isGrey && isColorGrey)
-        {
-            Debug.Log("IS GREY");
         }
     }
 
     void CalculateScore()
     {
-        scoreText.text = Time.time.ToString("0");
+        //if (isRed && isColourRed)
+        //{
+        //    // hasScored = true;
+        //    //isRed = false;
+        //    //Physics.IgnoreLayerCollision(0, 7);
+        //    score++;
+        //}
+
+        //if (hasScored)
+        //{
+        //    score++;
+        //    hasScored = false;
+        //}
+
+        //scoreText.text = Time.time.ToString("0");
+        scoreText.text = score.ToString("0");
     }
+
+
+
 }
