@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private float jumpTimer;
     private float jumpGraceTime = 0.2f;
 
-    private bool hasWon = false;
+    //private bool hasWon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -80,10 +80,10 @@ public class Player : MonoBehaviour
         // Retarts the game
         Restart();
 
-        if (hasWon)
-        {
-            SceneManager.LoadScene("WinScreen");
-        }
+        //if (hasWon)
+        //{
+        //    SceneManager.LoadScene("WinScreen");
+        //}
     }
 
     void Lose()
@@ -110,12 +110,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.gameObject.CompareTag("Finish"))
-        {
-            Debug.Log("Collision with Finish");
-            hasWon = true;
-        }
-    }
+    //private void OnControllerColliderHit(ControllerColliderHit hit)
+    //{
+    //    if (hit.gameObject.CompareTag("Finish"))
+    //    {
+    //        Debug.Log("Collision with Finish");
+    //        hasWon = true;
+    //    }
+    //}
 }
