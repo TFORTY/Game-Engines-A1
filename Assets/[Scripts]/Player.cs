@@ -90,75 +90,13 @@ public class Player : MonoBehaviour
             jumpTimer = -1;
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            isColorRed = true;
-            playerObject.GetComponent<Renderer>().material = redMat;
-        }
-        else if (Input.GetKeyDown(KeyCode.O))
-        {
-            isColorBlue = true;
-            playerObject.GetComponent<Renderer>().material = blueMat;
-        }
-        else if (Input.GetKeyDown(KeyCode.P))
-        {
-            isColorYellow = true;
-            playerObject.GetComponent<Renderer>().material = yellowMat;
-        }
-        else
-        {
-            //playerObject.GetComponent<Renderer>().material = playerMat;
-            isColorRed = false;
-            isColorBlue = false;
-            isColorYellow = false;
-        }
+        ColourChecks();
       
         // Vertical Velocity
         controller.Move(velocity * Time.deltaTime);
 
         // Checks if player collided with finish platform
         isFinished = Physics.CheckSphere(transform.position, 0.1f, finishLayer, QueryTriggerInteraction.Collide);
-
-        isRed = Physics.CheckSphere(transform.position, 0.1f, redLayer, QueryTriggerInteraction.Ignore);
-        isBlue = Physics.CheckSphere(transform.position, 0.1f, blueLayer, QueryTriggerInteraction.Ignore);
-        isYellow = Physics.CheckSphere(transform.position, 0.1f, yellowLayer, QueryTriggerInteraction.Ignore);
-        isGrey = Physics.CheckSphere(transform.position, 0.1f, greyLayer, QueryTriggerInteraction.Ignore);
-
-        if (isRed && isColorRed)
-        {
-            Debug.Log("IS RED");
-        }
-        else if (isRed && !isColorRed)
-        {
-            Debug.Log("NOT RED");          
-        }
-
-        if (isBlue && isColorBlue)
-        {
-            Debug.Log("IS BLUE");
-        }
-        else if (isBlue && !isColorBlue)
-        {
-            Debug.Log("NOT BLUE");
-        }
-
-        if (isYellow && isColorYellow)
-        {
-            Debug.Log("IS Yellow");
-        }
-        else if (isYellow && !isColorYellow)
-        {
-            Debug.Log("NOT Yellow");
-        }
-
-        if (isGrey && isColorGrey)
-        {
-            Debug.Log("IS Grey");
-        }
-        else if (isGrey && !isColorGrey)
-        {
-            Debug.Log("NOT Grey");
-        }
 
         // Goes to lose screen
         Lose();
@@ -197,5 +135,72 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("Game");
         }
+    }
+
+    void ColourChecks()
+    {
+        // Checks what colour platform the player is on
+        isRed = Physics.CheckSphere(transform.position, 0.1f, redLayer, QueryTriggerInteraction.Ignore);
+        isBlue = Physics.CheckSphere(transform.position, 0.1f, blueLayer, QueryTriggerInteraction.Ignore);
+        isYellow = Physics.CheckSphere(transform.position, 0.1f, yellowLayer, QueryTriggerInteraction.Ignore);
+        isGrey = Physics.CheckSphere(transform.position, 0.1f, greyLayer, QueryTriggerInteraction.Ignore);
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            isColorRed = true;
+            playerObject.GetComponent<Renderer>().material = redMat;
+        }
+        else if (Input.GetKeyDown(KeyCode.O))
+        {
+            isColorBlue = true;
+            playerObject.GetComponent<Renderer>().material = blueMat;
+        }
+        else if (Input.GetKeyDown(KeyCode.P))
+        {
+            isColorYellow = true;
+            playerObject.GetComponent<Renderer>().material = yellowMat;
+        }
+        else
+        {
+            //isColorGrey = true;
+            //playerObject.GetComponent<Renderer>().material = playerMat;
+            //isColorRed = false;
+            //isColorBlue = false;
+            //isColorYellow = false;
+        }
+
+        if (isRed && isColorRed)
+        {
+            Debug.Log("IS RED");
+        }
+        else if (isRed && !isColorRed)
+        {
+            Debug.Log("NOT RED");
+        }
+        else if (isBlue && isColorBlue)
+        {
+            Debug.Log("IS BLUE");
+        }
+        else if (isBlue && !isColorBlue)
+        {
+            Debug.Log("NOT BLUE");
+        } 
+        else if (isYellow && isColorYellow)
+        {
+            Debug.Log("IS YELLOW");
+        }
+        else if (isYellow && !isColorYellow)
+        {
+            Debug.Log("NOT YELLOW");
+        }
+        
+        //if (isGrey && isColorGrey)
+        //{
+        //    Debug.Log("IS Grey");
+        //}
+        //else if (isGrey && !isColorGrey)
+        //{
+        //    Debug.Log("NOT Grey");
+        //}
     }
 }
