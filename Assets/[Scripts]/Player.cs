@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     private float jumpGraceTime = 0.2f;
 
     private float score;
+    public Text scoreText;
 
     private bool isFinished;
     private bool isRed;
@@ -42,6 +44,8 @@ public class Player : MonoBehaviour
     public Material redMat;
     public Material blueMat;
     public Material yellowMat;
+
+    private bool canSwitchColor = false;
 
     // Start is called before the first frame update
     void Start()
@@ -90,13 +94,11 @@ public class Player : MonoBehaviour
             jumpTimer = -1;
         }
 
+        // Checks what colour the player is
         ColourChecks();
-      
+
         // Vertical Velocity
         controller.Move(velocity * Time.deltaTime);
-
-        // Checks if player collided with finish platform
-        isFinished = Physics.CheckSphere(transform.position, 0.1f, finishLayer, QueryTriggerInteraction.Collide);
 
         // Goes to lose screen
         Lose();
@@ -106,6 +108,9 @@ public class Player : MonoBehaviour
 
         // Retarts the game
         Restart();
+
+        // Calculates score
+        CalculateScore();
     }
 
     void Lose()
@@ -118,11 +123,15 @@ public class Player : MonoBehaviour
 
     void Win()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            SceneManager.LoadScene("WinScreen");
-        }
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    SceneManager.LoadScene("WinScreen");
+        //}
 
+        // Checks if player collided with finish platform
+        isFinished = Physics.CheckSphere(transform.position, 0.1f, finishLayer, QueryTriggerInteraction.Collide);
+
+        // Switches to win screen if player finishes level
         if (isFinished)
         {
             SceneManager.LoadScene("WinScreen");
@@ -160,14 +169,22 @@ public class Player : MonoBehaviour
             isColorYellow = true;
             playerObject.GetComponent<Renderer>().material = yellowMat;
         }
-        else
-        {
-            //isColorGrey = true;
-            //playerObject.GetComponent<Renderer>().material = playerMat;
-            //isColorRed = false;
-            //isColorBlue = false;
-            //isColorYellow = false;
-        }
+
+        //if (isGrey)
+        //{
+        //    playerObject.GetComponent<Renderer>().material = playerMat;
+        //}
+
+        //if (isGrey && canSwitchColor)
+        //{
+        //    isColorGrey = true;
+        //    playerObject.GetComponent<Renderer>().material = playerMat;
+        //    canSwitchColor = true;
+        //}
+        //else
+        //{
+        //    canSwitchColor = false;
+        //}
 
         if (isRed && isColorRed)
         {
@@ -193,14 +210,15 @@ public class Player : MonoBehaviour
         {
             Debug.Log("NOT YELLOW");
         }
-        
-        //if (isGrey && isColorGrey)
-        //{
-        //    Debug.Log("IS Grey");
-        //}
-        //else if (isGrey && !isColorGrey)
-        //{
-        //    Debug.Log("NOT Grey");
-        //}
+       
+        else if (isGrey && isColorGrey)
+        {
+            Debug.Log("IS GREY");
+        }
+    }
+
+    void CalculateScore()
+    {
+        scoreText.text = Time.time.ToString("0");
     }
 }
