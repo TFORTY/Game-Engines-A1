@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public LayerMask groundLayer;
-    
+    public LayerMask finishLayer;
+
     public float gravity = -50f;
     private CharacterController controller;
     private Vector3 velocity;
@@ -19,7 +20,7 @@ public class Player : MonoBehaviour
     private float jumpTimer;
     private float jumpGraceTime = 0.2f;
 
-    //private bool hasWon = false;
+    private bool isFinished;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +72,8 @@ public class Player : MonoBehaviour
         // Vertical Velocity
         controller.Move(velocity * Time.deltaTime);
 
+        isFinished = Physics.CheckSphere(transform.position, 0.1f, finishLayer, QueryTriggerInteraction.Collide);
+
         // Goes to lose screen
         Lose();
 
@@ -79,11 +82,6 @@ public class Player : MonoBehaviour
 
         // Retarts the game
         Restart();
-
-        //if (hasWon)
-        //{
-        //    SceneManager.LoadScene("WinScreen");
-        //}
     }
 
     void Lose()
@@ -100,6 +98,11 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("WinScreen");
         }
+
+        if (isFinished)
+        {
+            SceneManager.LoadScene("WinScreen");
+        }
     }
 
     void Restart()
@@ -109,13 +112,4 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene("Game");
         }
     }
-
-    //private void OnControllerColliderHit(ControllerColliderHit hit)
-    //{
-    //    if (hit.gameObject.CompareTag("Finish"))
-    //    {
-    //        Debug.Log("Collision with Finish");
-    //        hasWon = true;
-    //    }
-    //}
 }
