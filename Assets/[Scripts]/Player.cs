@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask finishLayer;
     public LayerMask redLayer;
+    public LayerMask blueLayer;
+    public LayerMask yellowMask;
 
     public float gravity = -50f;
     private CharacterController controller;
@@ -25,8 +27,18 @@ public class Player : MonoBehaviour
 
     private bool isFinished;
     private bool isRed;
+    private bool isBlue;
+    private bool isYellow;
 
     private bool isColorRed;
+    private bool isColorBlue;
+    private bool isColorYellow;
+
+    public GameObject playerObject;
+    public Material playerMat;
+    public Material redMat;
+    public Material blueMat;
+    public Material yellowMat;
 
     // Start is called before the first frame update
     void Start()
@@ -78,14 +90,27 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.I))
         {
             isColorRed = true;
-            score++;
+            playerObject.GetComponent<Renderer>().material = redMat;
+            //score++;
+        }
+        else if (Input.GetKey(KeyCode.O))
+        {
+            isColorBlue = true;
+            playerObject.GetComponent<Renderer>().material = blueMat;
+        }
+        else if (Input.GetKey(KeyCode.P))
+        {
+            isColorYellow = true;
+            playerObject.GetComponent<Renderer>().material = yellowMat;
         }
         else
         {
+            playerObject.GetComponent<Renderer>().material = playerMat;
             isColorRed = false;
+            isColorBlue = false;
+            isColorYellow = false;
         }
-
-
+      
         // Vertical Velocity
         controller.Move(velocity * Time.deltaTime);
 
