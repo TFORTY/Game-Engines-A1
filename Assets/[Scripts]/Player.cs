@@ -181,17 +181,14 @@ public class Player : MonoBehaviour
         if (isRed && isColourRed)
         {
             score++;
-            Debug.Log("RED HIT");
         }
         if (isBlue && isColourBlue)
         {
             score++;
-            Debug.Log("BLUE HIT");
         }
         if (isYellow && isColourYellow)
         {
             score++;
-            Debug.Log("YELLOW HIT");
         }
     }
 }
