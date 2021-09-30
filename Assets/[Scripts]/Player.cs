@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public LayerMask redLayer;
     public LayerMask blueLayer;
     public LayerMask yellowMask;
+    public LayerMask greyMask;
 
     public float gravity = -50f;
     private CharacterController controller;
@@ -87,25 +88,25 @@ public class Player : MonoBehaviour
             jumpTimer = -1;
         }
 
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))
         {
             isColorRed = true;
             playerObject.GetComponent<Renderer>().material = redMat;
             //score++;
         }
-        else if (Input.GetKey(KeyCode.O))
+        else if (Input.GetKeyDown(KeyCode.O))
         {
             isColorBlue = true;
             playerObject.GetComponent<Renderer>().material = blueMat;
         }
-        else if (Input.GetKey(KeyCode.P))
+        else if (Input.GetKeyDown(KeyCode.P))
         {
             isColorYellow = true;
             playerObject.GetComponent<Renderer>().material = yellowMat;
         }
         else
         {
-            playerObject.GetComponent<Renderer>().material = playerMat;
+            //playerObject.GetComponent<Renderer>().material = playerMat;
             isColorRed = false;
             isColorBlue = false;
             isColorYellow = false;
