@@ -3,6 +3,19 @@
 Description:
 This game project takes heavy influence from a first year GDW game called Rainbow Runner. The game is a 3D platformer/endless runner hybrid where the player can change colours to match the platforms to gain points. The goal is to reach the end while trying to earn as many points as possible without falling off. 
 
+Assets for Prototype: 
+Player 
+Scrolling Background
+Platforms
+Finish Goal
+Movement Script
+Platform Logic + Collisions
+Win/Loss Conditions
+Colour Change mechanic
+Jumping
+Score UI
+Scenes (Main Menu, Win, Loss, Game)
+
 
 Controls:
 
