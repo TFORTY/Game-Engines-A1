@@ -1,8 +1,5 @@
 # Game Engines A1
 
-Description:
-This game project takes heavy influence from a first year GDW game called Rainbow Runner. The game is a 3D platformer/endless runner hybrid where the player can change colours to match the platforms to gain points. The goal is to reach the end while trying to earn as many points as possible without falling off. 
-
 Controls:
 
 Spacebar to jump
