@@ -34,6 +34,7 @@ public class Planet : MonoBehaviour
         if (transform.position.x < screenBounds.x - screenOffset)
         {
             Destroy(this.gameObject);
+            //BasicPool.Instance.AddToPool(gameObject);
         }
     }
 }

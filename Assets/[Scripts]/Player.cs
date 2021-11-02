@@ -192,11 +192,11 @@ public class Player : MonoBehaviour
         {
             score++;
         }
-        if (isBlue && isColourBlue)
+        else if (isBlue && isColourBlue)
         {
             score++;
         }
-        if (isYellow && isColourYellow)
+        else if (isYellow && isColourYellow)
         {
             score++;
         }
