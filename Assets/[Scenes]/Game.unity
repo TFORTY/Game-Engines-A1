@@ -196,7 +196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &60443324
 Transform:
   m_ObjectHideFlags: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 60443323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60312637b619b8f46ba8fa6ed3778480, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ae233a1bad66814a8ab6e25ac3c7183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 33404187714622636, guid: 369e0004850c50b40bc8c858a2f5e4ff, type: 3}
@@ -3197,7 +3197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1382725455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3207,7 +3207,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382725454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16d5f31b13b27e4cb16ef596cac8f9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bf474222040d7640834b4b765792f1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   planetPrefab: {fileID: 33404187714622636, guid: 369e0004850c50b40bc8c858a2f5e4ff, type: 3}

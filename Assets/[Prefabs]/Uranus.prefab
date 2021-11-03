@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33404187714622635}
   - component: {fileID: 7423391235772976635}
-  - component: {fileID: -3910239423280975849}
+  - component: {fileID: 7220897276579693709}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -50,7 +50,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-3910239423280975849
+--- !u!114 &7220897276579693709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 33404187714622636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030384d02bb62af42ab5200c79c5a694, type: 3}
+  m_Script: {fileID: 11500000, guid: b373a2cffe8f5974ca5dc6cb7798d354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 5

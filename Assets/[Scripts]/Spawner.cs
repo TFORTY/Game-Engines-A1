@@ -23,13 +23,6 @@ public class Spawner : MonoBehaviour
     public GameObject player;
     public float spawnOffset = 0f;
 
-    // Spawner Pool Stuff
-    //[SerializeField]
-   // private float delay = 0.5f;
-
-    //private float lastTime;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -37,18 +30,8 @@ public class Spawner : MonoBehaviour
         StartCoroutine(planetWave());
     }
 
-    //private void Update()
-    //{
-    //    if (Time.time - lastTime > delay)
-    //    {
-    //        spawnPlanet();
-    //    }
-    //}
-
     private void spawnPlanet()
-    {
-        //lastTime = Time.time;
-        
+    {        
         Vector3 position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
 
         var planet = AsteroidPool.Instance.GetFromPool();

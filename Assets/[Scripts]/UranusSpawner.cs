@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SaturnSpawner : MonoBehaviour
+public class UranusSpawner : MonoBehaviour
 {
     // Spawner attributes
     [SerializeField]
@@ -30,7 +30,7 @@ public class SaturnSpawner : MonoBehaviour
     {
         Vector3 position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
 
-        var planet = SaturnPool.Instance.GetFromPool();
+        var planet = UranusPool.Instance.GetFromPool();
         planet.transform.position = position;
     }
 
