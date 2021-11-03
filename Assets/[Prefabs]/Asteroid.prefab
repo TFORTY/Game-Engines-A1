@@ -688,7 +688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8029646184603197266}
   - component: {fileID: 4614158956805308065}
-  - component: {fileID: -2882100526523327636}
+  - component: {fileID: 5726430610419046491}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -734,7 +734,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-2882100526523327636
+--- !u!114 &5726430610419046491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -750,6 +750,7 @@ MonoBehaviour:
   ySpeed: 20
   zSpeed: 10
   moveSpeed: 10
+  screenOffset: 50
 --- !u!1 &8029646184628079058
 GameObject:
   m_ObjectHideFlags: 0

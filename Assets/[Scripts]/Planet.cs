@@ -12,12 +12,12 @@ public class Planet : MonoBehaviour
     public float ySpeed = 0f;
     public float zSpeed = 0f;
     public float moveSpeed = 10f;
-    private float screenOffset = 50f;
+    public float screenOffset = 50f;
 
-    private Rigidbody rb;
-    private Vector3 screenBounds;
+    protected Rigidbody rb;
+    protected Vector3 screenBounds;
 
-    private void Start()
+    protected void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.velocity = new Vector3(-moveSpeed, 0);
@@ -25,7 +25,7 @@ public class Planet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         // Rotate the planets on their respective axis
         transform.Rotate( xSpeed * Time.deltaTime, ySpeed * Time.deltaTime, zSpeed * Time.deltaTime);

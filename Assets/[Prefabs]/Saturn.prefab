@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6070035964913922011}
   - component: {fileID: -2105397354082324231}
-  - component: {fileID: 7073090872623181789}
+  - component: {fileID: -8415707467013177438}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -242,7 +242,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7073090872623181789
+--- !u!114 &-8415707467013177438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,3 +258,4 @@ MonoBehaviour:
   ySpeed: 10
   zSpeed: 10
   moveSpeed: 10
+  screenOffset: 50
