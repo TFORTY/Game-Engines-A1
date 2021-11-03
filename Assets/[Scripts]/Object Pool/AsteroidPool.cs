@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicPool : MonoBehaviour
+public class AsteroidPool : MonoBehaviour
 {
     [SerializeField]
     private GameObject prefab;
 
     private Queue<GameObject> availableObjects = new Queue<GameObject>();
 
-    public static BasicPool Instance { get; private set; }
+    public static AsteroidPool Instance { get; private set; }
 
     private void Awake()
     {

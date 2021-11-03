@@ -2,11 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// References Used:
-// https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
-// https://docs.unity3d.com/ScriptReference/Coroutine.html
-
-public class Spawner : MonoBehaviour
+public class SaturnSpawner : MonoBehaviour
 {
     // Spawner attributes
     [SerializeField]
@@ -23,13 +19,6 @@ public class Spawner : MonoBehaviour
     public GameObject player;
     public float spawnOffset = 0f;
 
-    // Spawner Pool Stuff
-    //[SerializeField]
-   // private float delay = 0.5f;
-
-    //private float lastTime;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -37,21 +26,13 @@ public class Spawner : MonoBehaviour
         StartCoroutine(planetWave());
     }
 
-    //private void Update()
-    //{
-    //    if (Time.time - lastTime > delay)
-    //    {
-    //        spawnPlanet();
-    //    }
-    //}
-
     private void spawnPlanet()
     {
         //lastTime = Time.time;
-        
+
         Vector3 position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
 
-        var planet = AsteroidPool.Instance.GetFromPool();
+        var planet = SaturnPool.Instance.GetFromPool();
         planet.transform.position = position;
 
         // Spawn a planet at a random y and z while making sure they start to spawn away from the player
@@ -62,10 +43,10 @@ public class Spawner : MonoBehaviour
     IEnumerator planetWave()
     {
         // Spawns planets at every interval
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(respawnTime);
             spawnPlanet();
-        }  
+        }
     }
 }
