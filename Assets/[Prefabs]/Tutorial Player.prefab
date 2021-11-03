@@ -1646,6 +1646,7 @@ GameObject:
   - component: {fileID: 2758632471493748220}
   - component: {fileID: 2758632471493748222}
   - component: {fileID: 4163458855638000462}
+  - component: {fileID: 6654639169461201113}
   m_Layer: 0
   m_Name: Tutorial Player
   m_TagString: Untagged
@@ -1703,6 +1704,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &6654639169461201113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2758632471493748099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deb2d9fb627bbbc45a8904a79bc10514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  moveSpeed: 5
+  jumpForce: 2
+  playerObject: {fileID: 0}
+  redMat: {fileID: 0}
+  blueMat: {fileID: 0}
+  yellowMat: {fileID: 0}
 --- !u!1 &2758632471531404302
 GameObject:
   m_ObjectHideFlags: 0
