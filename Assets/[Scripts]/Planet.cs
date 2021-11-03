@@ -12,7 +12,7 @@ public class Planet : MonoBehaviour
     public float ySpeed = 0f;
     public float zSpeed = 0f;
     public float moveSpeed = 10f;
-    public float screenOffset = 50f;
+    protected float screenOffset = 50f;
 
     protected Rigidbody rb;
     protected Vector3 screenBounds;
