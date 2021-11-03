@@ -21,15 +21,6 @@ public class SpawnRandomly : MonoBehaviour
         }
     }
 
-    private void SpawnBomb()
-    {
-        lastTime = Time.time;
-
-        Vector3 position = RandomPointInBox(transform.position, transform.localScale);
-
-        var bomb = Instantiate(bombPrefab, position, Quaternion.identity);
-    }
-
     private void SpawnBombFromPool()
     {
         lastTime = Time.time;

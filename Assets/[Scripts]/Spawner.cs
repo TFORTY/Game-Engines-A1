@@ -9,7 +9,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     // Spawner attributes
-    public GameObject planetPrefab;
+    [SerializeField]
+    private GameObject planetPrefab;
     public float respawnTime = 1f;
     public float spawnLocation = -10f;
     public float minY = 0f;
@@ -18,6 +19,12 @@ public class Spawner : MonoBehaviour
     public float maxZ = 0f;
     private Vector3 screenBounds;
 
+    // Spawner Pool Stuff
+    [SerializeField]
+    private float delay = 0.5f;
+
+    private float lastTime;
+
     public GameObject player;
     public float spawnOffset = 0f;
 
@@ -25,14 +32,33 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        StartCoroutine(planetWave());
+        //StartCoroutine(planetWave());
+    }
+
+    private void Update()
+    {
+        if (Time.time - lastTime > delay)
+        {
+            spawnPlanet();
+        }
     }
 
     private void spawnPlanet()
     {
+        lastTime = Time.time;
+
+        Vector3 position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
+
+        var planet = BasicPool.Instance.GetFromPool();
+        planet.transform.position = position;
+
+        //var planet = BasicPool.Instance.GetFromPool();
+        //planet.transform.position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
+
+
         // Spawn a planet at a random y and z while making sure they start to spawn away from the player
-        GameObject a = Instantiate(planetPrefab) as GameObject;
-        a.transform.position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
+        //GameObject a = Instantiate(planetPrefab) as GameObject;
+        //a.transform.position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
     }
 
     IEnumerator planetWave()

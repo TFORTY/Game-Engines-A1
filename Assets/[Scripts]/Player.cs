@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
     public Material blueMat;
     public Material yellowMat;
 
+    Vector3 playerStartPos;
+
     // Start is called before the first frame update
     void Start()
     {

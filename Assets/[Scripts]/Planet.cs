@@ -33,8 +33,8 @@ public class Planet : MonoBehaviour
         // Removes game object if passed screen bounds
         if (transform.position.x < screenBounds.x - screenOffset)
         {
-            Destroy(this.gameObject);
-            //BasicPool.Instance.AddToPool(gameObject);
+            //Destroy(this.gameObject);
+            BasicPool.Instance.AddToPool(gameObject);
         }
     }
 }
