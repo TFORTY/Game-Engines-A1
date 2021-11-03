@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     // Spawner attributes
     [SerializeField]
     private GameObject planetPrefab;
+
     public float respawnTime = 1f;
     public float spawnLocation = -10f;
     public float minY = 0f;
@@ -19,42 +20,43 @@ public class Spawner : MonoBehaviour
     public float maxZ = 0f;
     private Vector3 screenBounds;
 
-    // Spawner Pool Stuff
-    [SerializeField]
-    private float delay = 0.5f;
-
-    private float lastTime;
-
     public GameObject player;
     public float spawnOffset = 0f;
+
+    // Spawner Pool Stuff
+    //[SerializeField]
+   // private float delay = 0.5f;
+
+    //private float lastTime;
+
 
     // Start is called before the first frame update
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
-        //StartCoroutine(planetWave());
+        StartCoroutine(planetWave());
     }
 
-    private void Update()
-    {
-        if (Time.time - lastTime > delay)
-        {
-            spawnPlanet();
-        }
-    }
+    //private void Update()
+    //{
+    //    if (Time.time - lastTime > delay)
+    //    {
+    //        spawnPlanet();
+    //    }
+    //}
 
     private void spawnPlanet()
     {
-        lastTime = Time.time;
-
+        //lastTime = Time.time;
+        
         Vector3 position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
 
         var planet = BasicPool.Instance.GetFromPool();
         planet.transform.position = position;
 
+        
         //var planet = BasicPool.Instance.GetFromPool();
-        //planet.transform.position = new Vector3(screenBounds.x * spawnLocation + player.transform.position.x + spawnOffset, Random.Range(minY, maxY), Random.Range(minZ, maxZ));
-
+        //planet.transform.position = position;
 
         // Spawn a planet at a random y and z while making sure they start to spawn away from the player
         //GameObject a = Instantiate(planetPrefab) as GameObject;

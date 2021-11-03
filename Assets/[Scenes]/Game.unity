@@ -1797,7 +1797,6 @@ MonoBehaviour:
   maxY: 20
   minZ: 30
   maxZ: 60
-  delay: 2
   player: {fileID: 2097672137}
   spawnOffset: 10
 --- !u!4 &682982262
@@ -1850,7 +1849,6 @@ MonoBehaviour:
   maxY: 20
   minZ: 30
   maxZ: 60
-  delay: 0.5
   player: {fileID: 2097672137}
   spawnOffset: 10
 --- !u!4 &684753740
@@ -2177,7 +2175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &891813632
 Transform:
   m_ObjectHideFlags: 0
@@ -3163,7 +3161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1369847816
 Transform:
   m_ObjectHideFlags: 0
@@ -3217,7 +3215,6 @@ MonoBehaviour:
   maxY: 20
   minZ: 30
   maxZ: 60
-  delay: 0.5
   player: {fileID: 2097672137}
   spawnOffset: 10
 --- !u!4 &1382725456
