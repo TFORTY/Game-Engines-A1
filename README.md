@@ -38,5 +38,12 @@ Reference links are also commented in the scripts that they pertain to
 - https://www.youtube.com/watch?v=E7gmylDS1C4
 - https://www.youtube.com/watch?v=N8QMuFPK4v0&t=1696s
 
+#### Sound/Music Assets:
+- https://www.youtube.com/watch?v=6K6X-zoye94
+- https://www.youtube.com/watch?v=dFlfzjvQ-Fs
+- https://www.youtube.com/watch?v=kXF3VYYa5TI
+
+#### *All the rest of the models and objects (player, planets, platforms) were created by me using Unity primitives*
+
 #### Labs Referenced:
 - Lab 6 for Object Pooling
