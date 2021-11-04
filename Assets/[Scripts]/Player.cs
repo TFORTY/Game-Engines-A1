@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
         }
 
         if (isGrounded && (isJumpPressed || (jumpTimer > 0 && Time.time < jumpTimer + jumpGraceTime)))
-        {
+        {       
             velocity.y += Mathf.Sqrt(jumpForce * -2 * gravity);
             jumpTimer = -1;
         }

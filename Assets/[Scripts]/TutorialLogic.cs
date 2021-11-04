@@ -8,7 +8,6 @@ public class TutorialLogic : MonoBehaviour
 {
     public Text tutorialText;
     float timer = 0f;
-    public Text timerText;
     bool text1 = false;
     bool text2 = false;
     bool text3 = false;
@@ -30,7 +29,6 @@ public class TutorialLogic : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        timerText.text = timer.ToString("0");
 
         if (timer >= 5)
         {
