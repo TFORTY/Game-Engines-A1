@@ -1959,7 +1959,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetPrefab: {fileID: 8029646184603197267, guid: 65faaf4b057b74242a90ad4a56dff8af, type: 3}
   respawnTime: 2
-  spawnLocation: -10
+  spawnLocation: -12
   minY: 10
   maxY: 20
   minZ: 30
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetPrefab: {fileID: 8699706641013545656, guid: 2f4675db3a474d14d8d60754a69ccb66, type: 3}
   respawnTime: 5
-  spawnLocation: -35
+  spawnLocation: -33
   minY: 10
   maxY: 20
   minZ: 30
@@ -3491,7 +3491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planetPrefab: {fileID: 33404187714622636, guid: 369e0004850c50b40bc8c858a2f5e4ff, type: 3}
   respawnTime: 3
-  spawnLocation: -25
+  spawnLocation: -22
   minY: 10
   maxY: 20
   minZ: 30
@@ -5395,7 +5395,7 @@ PrefabInstance:
       objectReference: {fileID: 1867562675}
     - target: {fileID: 2758632471493748221, guid: 032aec3077d5a8a47aa71f199e3786c8, type: 3}
       propertyPath: moveSpeed
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2758632471493748221, guid: 032aec3077d5a8a47aa71f199e3786c8, type: 3}
       propertyPath: playerMat
