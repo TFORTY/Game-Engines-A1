@@ -258,4 +258,3 @@ MonoBehaviour:
   ySpeed: 10
   zSpeed: 10
   moveSpeed: 10
-  screenOffset: 50

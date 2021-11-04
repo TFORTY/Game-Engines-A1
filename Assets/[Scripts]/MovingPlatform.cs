@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    float moveSpeed = 2f;
-    
-  
-    // Start is called before the first frame update
-    void Start()
+    Vector3 startPos;
+    public Vector3 endPos;
+
+    float moveSpeed = 1f;
+
+    private void Start()
     {
-        
+        startPos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 1 * Time.deltaTime, 0);
+        transform.Translate(0, moveSpeed * Time.deltaTime, 0);
+    
+        if (transform.position.y >= endPos.y)
+        {
+            moveSpeed = -moveSpeed;
+        }
+
+        if (transform.position.y <= startPos.y)
+        {
+            moveSpeed = 1f;
+        }
     }
 }

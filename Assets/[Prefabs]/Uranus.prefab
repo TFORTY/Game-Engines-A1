@@ -64,9 +64,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpeed: 5
   ySpeed: 20
-  zSpeed: 10
+  zSpeed: 5
   moveSpeed: 10
-  screenOffset: 50
 --- !u!1 &33404189445498379
 GameObject:
   m_ObjectHideFlags: 0
