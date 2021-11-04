@@ -16,6 +16,9 @@ public class TutorialLogic : MonoBehaviour
     bool text5 = false;
     bool text6 = false;
     bool text7 = false;
+    bool text8 = false;
+    bool text9 = false;
+    bool text10 = false;
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +67,22 @@ public class TutorialLogic : MonoBehaviour
             tutorialText.text = "Nice! Hope you got the hang of it cause your adventure begins now!";
             text7 = true;
         }
-        if (timer >= 32 && text7)
+        if (timer >= 30 && text7)
+        {
+            tutorialText.text = "3";
+            text8 = true;
+        }
+        if (timer >= 31 && text8)
+        {
+            tutorialText.text = "2";
+            text9 = true;
+        }
+        if (timer >= 32 && text9)
+        {
+            tutorialText.text = "1";
+            text10 = true;
+        }
+        if (timer >= 33 && text10)
         {
             SceneManager.LoadScene("Game");
         }

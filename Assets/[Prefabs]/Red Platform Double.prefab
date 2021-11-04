@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2230622218283493421}
   - component: {fileID: 2230622218283493420}
   - component: {fileID: 2230622218283493419}
+  - component: {fileID: 2849158067078887099}
   m_Layer: 3
   m_Name: Red Platform Double
   m_TagString: Untagged
@@ -98,6 +99,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2849158067078887099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2230622218283493417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c88cba90fd391b4cbba0adb6957ff7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat1: {fileID: 2100000, guid: 3eaed090922c30f46b932cb79750513d, type: 2}
+  mat2: {fileID: 2100000, guid: 98ecc14495e6294449d20bf86661f883, type: 2}
+  duration: 2
 --- !u!1 &3812398399727160249
 GameObject:
   m_ObjectHideFlags: 0
