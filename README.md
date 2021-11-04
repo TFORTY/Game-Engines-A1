@@ -4,6 +4,10 @@
 This game project takes heavy influence from a first year GDW game called Rainbow Runner. The game is a 3D platformer/endless runner hybrid where the player can change colours to match the platforms to gain points. The goal is to reach the end while trying to earn as many points as possible without falling off. This is an extension off of A1 except with the introduction to one of the optimization patterns.
 
 ### Screenshots:
+![title](https://user-images.githubusercontent.com/56273569/140430321-a594509a-d9ad-472a-9a36-91cf65815a00.PNG)
+![S1](https://user-images.githubusercontent.com/56273569/140429965-0ff285b3-df5c-494e-ae96-bd107bb809b1.PNG)
+![tut](https://user-images.githubusercontent.com/56273569/140430340-59ce2927-9a70-4b75-8d1c-cf62f4affc8e.PNG)
+![game](https://user-images.githubusercontent.com/56273569/140430348-d6edc4ab-faa6-4542-93d6-39549a51406f.PNG)
 
 ### Link to Video: 
 
