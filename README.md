@@ -11,7 +11,7 @@ This game project takes heavy influence from a first year GDW game called Rainbo
 ![tut](https://user-images.githubusercontent.com/56273569/140430340-59ce2927-9a70-4b75-8d1c-cf62f4affc8e.PNG)
 ![game](https://user-images.githubusercontent.com/56273569/140430348-d6edc4ab-faa6-4542-93d6-39549a51406f.PNG)
 
-### Link to Video: 
+### Link to Video: https://youtu.be/Nd_nmU884Ww
 
 ### UML Diagram: 
 ![A3 UML](https://user-images.githubusercontent.com/56273569/140435156-2036675a-807e-43cb-90a3-4636d946e93c.png)
