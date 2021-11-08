@@ -11,6 +11,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public static event System.Action<string> scoredPoint;
+
     // Layer Masks to detect collisions
     public LayerMask groundLayer;
     public LayerMask finishLayer;
@@ -191,14 +193,17 @@ public class Player : MonoBehaviour
         if (isRed && isColourRed)
         {
             score++;
+            scoredPoint?.Invoke("SCORED!");
         }
         else if (isBlue && isColourBlue)
         {
             score++;
+            scoredPoint?.Invoke("SCORED!");
         }
         else if (isYellow && isColourYellow)
         {
             score++;
+            scoredPoint?.Invoke("SCORED!");
         }
     }
 }
