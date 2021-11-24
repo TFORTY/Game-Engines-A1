@@ -57,3 +57,6 @@ Reference links are also commented in the scripts that they pertain to
 #### Labs Referenced:
 - Lab 6 for Object Pool
 - Lab 4 for Singleton Pattern
+
+### Disclaimer:
+- There is a possibility that this repo has a Plugins folder containing a folder called Demigiant. This was used for Lab 8 when doing Decoupling and Event Queue patterns. For the purpose of A4, we did not however use this plugin in any way shape or form. It was just imported to the project because of Lab 8 using the A3 as a base as well.
