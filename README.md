@@ -1,7 +1,7 @@
 # Game Engines A4
 
 ### Description:
-This game project takes heavy influence from a first year GDW game called Rainbow Runner. The game is a 3D platformer/endless runner hybrid where the player can change colours to match the platforms to gain points. The goal is to reach the end while trying to earn as many points as possible without falling off. This is an extension off of A1 except with the introduction to one of the optimization patterns.
+This game is a 3D platformer/endless runner hybrid where the player can change colours to match the platforms to gain points. The goal is to reach the end while trying to earn as many points as possible without falling off. This is an extension off A3 to accommodate for A4.
 
 ### Screenshots:
 ![title](https://user-images.githubusercontent.com/56273569/140430321-a594509a-d9ad-472a-9a36-91cf65815a00.PNG)
@@ -10,6 +10,13 @@ This game project takes heavy influence from a first year GDW game called Rainbo
 ![game](https://user-images.githubusercontent.com/56273569/140430348-d6edc4ab-faa6-4542-93d6-39549a51406f.PNG)
 
 ### Link to Video: 
+
+### Development Team:
+- Ehren Chan 100753167
+- Aiden Gimpel 100740094
+- Jonathan Narine 100741302
+- Christian Riggi 100752293
+- Tyler Wong 100750805
 
 ### Controls:
 
@@ -48,4 +55,5 @@ Reference links are also commented in the scripts that they pertain to
 #### *All the rest of the models and objects (player, planets, platforms) were created by me using Unity primitives*
 
 #### Labs Referenced:
-- Lab 6 for Object Pooling
+- Lab 6 for Object Pool
+- Lab 4 for Singleton Pattern
