@@ -19,68 +19,131 @@ public class TutorialLogic : MonoBehaviour
     bool text9 = false;
     bool text10 = false;
 
+    bool space = false;
+    bool i = false;
+    bool o = false;
+    bool p = false;
+    private bool dirty;
+    bool starter;
     // Start is called before the first frame update
     void Start()
     {
         tutorialText.text = "Welcome to Rainbow Rhythm! This game is an endless runner/platformer hybrid where the goal is to reach the finish without falling!";
+        dirty = false;
+        starter = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
+        textChange();
+        if(dirty)
+            learning();
+    }
 
-        if (timer >= 5)
+    void learning()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            text2 = true;
+            dirty = false;
+            timer = 0;
+
+        }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            text4 = true;
+            dirty = false;
+
+        }
+        if (Input.GetKeyDown(KeyCode.O))//5
+        {
+            text5 = true;
+            dirty = false;
+
+        }
+        if (Input.GetKeyDown(KeyCode.P))//6
+        {
+            text6 = true;
+            timer = 0;
+            dirty = false;
+
+        }
+    }
+    void textChange(){
+        if (timer >= 5&& starter)//1
         {
             tutorialText.text = "Along the way, colourful platforms will appear and you can earn points by matching your colour with the platforms!";
             text1 = true;
+            starter = false;
         }
-        if (timer >= 10 && text1)
+
+        if (timer>=10 && text1)//2
         {
             tutorialText.text = "Press SPACE to jump. Cmon, let's see you bounce!";
-            text2 = true;
+            dirty = true;
+            text1 = false;
         }
-        if (timer >= 15 && text2)
+        if (text2)//3
         {
             tutorialText.text = "To change colours, use the following keys!";
             text3 = true;
+            text2 = false;
+
         }
-        if (timer >= 18 && text3)
+        if (timer >= 5 && text3)//4
         {
             tutorialText.text = "Press I for RED!";
-            text4 = true;
+            dirty = true;
+            text3 = false;
+
         }
-        if (timer >= 21 && text4)
+        if (text4)
         {
             tutorialText.text = "Press O for BLUE!";
-            text5 = true;
+            text4 = false;
+            dirty = true;
+
         }
-        if (timer >= 24 && text5)
+
+        if (text5)
         {
             tutorialText.text = "Press P for YELLOW!";
-            text6 = true;
+            text5 = false;
+            dirty = true;
+
         }
-        if (timer >= 27 && text6)
+        if (text6)//7
         {
             tutorialText.text = "Nice! Hope you got the hang of it cause your adventure begins now!";
             text7 = true;
+            text6 = false;
+
         }
-        if (timer >= 30 && text7)
+
+        if (timer >= 3 && text7)//8
         {
             tutorialText.text = "3";
             text8 = true;
+            text7 = false;
+
         }
-        if (timer >= 31 && text8)
+        if (timer >= 4 && text8)//9
         {
             tutorialText.text = "2";
             text9 = true;
+            text8 = false;
+
         }
-        if (timer >= 32 && text9)
+        if (timer >= 5 && text9)//10
         {
             tutorialText.text = "1";
             text10 = true;
+            text9 = false;
+
         }
-        if (timer >= 33 && text10)
+        if (timer >= 6 && text10)
         {
             SceneManager.LoadScene("Game");
         }
