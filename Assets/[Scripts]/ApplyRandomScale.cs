@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ApplyRandomScale : MonoBehaviour
 {
-    [DllImport("GameEnginesAssignment2DLL")]
+    [DllImport("RandomScaleValue.dll")]
     private static extern float RandomScaleValue(float minValue, float maxValue);
 
     [SerializeField] float minRandomFactor = 0.95f;
