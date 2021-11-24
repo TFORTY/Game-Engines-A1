@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 5845759609854894823}
   - component: {fileID: 5845759609854894820}
   - component: {fileID: 294300005044462756}
+  - component: {fileID: 7732771063870297981}
   m_Layer: 3
   m_Name: Yellow Platform
   m_TagString: Untagged
@@ -158,6 +159,20 @@ MonoBehaviour:
   mat1: {fileID: 2100000, guid: 2280ef0f6821db148bd6446e2a753f52, type: 2}
   mat2: {fileID: 2100000, guid: a6fdb51635ab1ae4994c4341fcd30fde, type: 2}
   duration: 2
+--- !u!114 &7732771063870297981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5845759609854894818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e08776ecc4ee8f42ae9e77d95978eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minRandomFactor: 0.95
+  maxRandomFactor: 1.5
 --- !u!1 &5845759611488835133
 GameObject:
   m_ObjectHideFlags: 0
