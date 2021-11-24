@@ -44,27 +44,31 @@ public class TutorialLogic : MonoBehaviour
 
     void learning()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&&text1)
         {
+            text1 = false;
             text2 = true;
             dirty = false;
             timer = 0;
 
         }
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I)&&text3)
         {
+            text3 = false;
             text4 = true;
             dirty = false;
 
         }
-        if (Input.GetKeyDown(KeyCode.O))//5
+        if (Input.GetKeyDown(KeyCode.O)&&text4)//5
         {
+            text4 = false;
             text5 = true;
             dirty = false;
 
         }
-        if (Input.GetKeyDown(KeyCode.P))//6
+        if (Input.GetKeyDown(KeyCode.P)&&text5)//6
         {
+            text5 = false;
             text6 = true;
             timer = 0;
             dirty = false;
@@ -83,7 +87,6 @@ public class TutorialLogic : MonoBehaviour
         {
             tutorialText.text = "Press SPACE to jump. Cmon, let's see you bounce!";
             dirty = true;
-            text1 = false;
         }
         if (text2)//3
         {
@@ -96,13 +99,11 @@ public class TutorialLogic : MonoBehaviour
         {
             tutorialText.text = "Press I for RED!";
             dirty = true;
-            text3 = false;
 
         }
         if (text4)
         {
             tutorialText.text = "Press O for BLUE!";
-            text4 = false;
             dirty = true;
 
         }
@@ -110,7 +111,6 @@ public class TutorialLogic : MonoBehaviour
         if (text5)
         {
             tutorialText.text = "Press P for YELLOW!";
-            text5 = false;
             dirty = true;
 
         }
