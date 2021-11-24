@@ -1,9 +1,7 @@
-# Game Engines A3
+# Game Engines A4
 
 ### Description:
 This game project takes heavy influence from a first year GDW game called Rainbow Runner. The game is a 3D platformer/endless runner hybrid where the player can change colours to match the platforms to gain points. The goal is to reach the end while trying to earn as many points as possible without falling off. This is an extension off of A1 except with the introduction to one of the optimization patterns.
-
-#### For this assignment, the optimization pattern that I decided to implement was the Object Pool pattern
 
 ### Screenshots:
 ![title](https://user-images.githubusercontent.com/56273569/140430321-a594509a-d9ad-472a-9a36-91cf65815a00.PNG)
@@ -11,10 +9,7 @@ This game project takes heavy influence from a first year GDW game called Rainbo
 ![tut](https://user-images.githubusercontent.com/56273569/140430340-59ce2927-9a70-4b75-8d1c-cf62f4affc8e.PNG)
 ![game](https://user-images.githubusercontent.com/56273569/140430348-d6edc4ab-faa6-4542-93d6-39549a51406f.PNG)
 
-### Link to Video: https://youtu.be/Nd_nmU884Ww
-
-### UML Diagram: 
-![A3 UML](https://user-images.githubusercontent.com/56273569/140435156-2036675a-807e-43cb-90a3-4636d946e93c.png)
+### Link to Video: 
 
 ### Controls:
 
