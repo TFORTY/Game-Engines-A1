@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 4012892261875520804}
   - component: {fileID: 4012892261875520805}
   - component: {fileID: 606460721059038190}
+  - component: {fileID: 7187190159717695089}
   m_Layer: 3
   m_Name: Red Platform Triple
   m_TagString: Untagged
@@ -271,3 +272,17 @@ MonoBehaviour:
   mat1: {fileID: 2100000, guid: 3eaed090922c30f46b932cb79750513d, type: 2}
   mat2: {fileID: 2100000, guid: 98ecc14495e6294449d20bf86661f883, type: 2}
   duration: 2
+--- !u!114 &7187190159717695089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012892261875520807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e08776ecc4ee8f42ae9e77d95978eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minRandomFactor: 0.5
+  maxRandomFactor: 1.05

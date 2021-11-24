@@ -32,10 +32,6 @@ public class Player : MonoBehaviour
     private float jumpTimer;
     private float jumpGraceTime = 0.2f;
 
-    // Score Attributes
-    private float score;
-    public Text scoreText;
-
     // Bools
     private bool isFinished;
     private bool isRed;
@@ -113,9 +109,6 @@ public class Player : MonoBehaviour
 
         // Retarts the game
         Restart();
-
-        // Calculates score
-        CalculateScore();
     }
 
     void Lose()
@@ -179,26 +172,20 @@ public class Player : MonoBehaviour
         }
     }
 
-    void CalculateScore()
-    {
-        // Updates the score
-        scoreText.text = score.ToString("0");
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         // Player gets score added if they match the colour to the correct platform on collision
         if (isRed && isColourRed)
         {
-            score++;
+            ScoreText.Instance.AddScore(1);    
         }
         else if (isBlue && isColourBlue)
         {
-            score++;
+            ScoreText.Instance.AddScore(1);    
         }
         else if (isYellow && isColourYellow)
         {
-            score++;
+            ScoreText.Instance.AddScore(1);          
         }
     }
 }
