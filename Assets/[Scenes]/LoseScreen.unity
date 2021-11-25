@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 1043820812}
   - component: {fileID: 1043820811}
   - component: {fileID: 1043820813}
+  - component: {fileID: 1043820814}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Sound Effects
@@ -701,6 +702,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8bf2c2324c73ae4a8deb4e20c7d6861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1043820814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043820810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c49d2a72718ac49b74ccd12b4df616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1241821436
