@@ -7,6 +7,7 @@ Game Design Patterns Used:
 - Object Pooling
 - Singleton
 - Dirty Flag
+- Obersver
 
 DLLs Used:
 - Random Scale 
