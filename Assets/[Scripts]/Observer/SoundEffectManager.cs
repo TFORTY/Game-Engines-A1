@@ -17,8 +17,11 @@ public class SoundEffectManager : MonoBehaviour
         //_audioSource variable grabs AudioSource component;
         _audioSource = GetComponent<AudioSource>();
 
+        //Action from the SoundInvoker script is called to play audio when you die for the first time
+        SoundInvoker.start_Sound += PlayAudio;
+
         //Action from the player class is referenced and used to playaudio 
-        SoundInvoker.is_Dead += PlayAudio;
+        Player.is_Dead += PlayAudio;
 
 
         //This section of code was referenced: https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html
@@ -43,6 +46,7 @@ public class SoundEffectManager : MonoBehaviour
 
     public void Update()
     {
+        //Stop lose/Win screen audio when returning to game
         if (SceneManager.GetActiveScene().name == "Game")
         {
 
