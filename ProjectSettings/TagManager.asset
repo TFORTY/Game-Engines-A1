@@ -8,6 +8,7 @@ TagManager:
   - Blue
   - Yellow
   - Base
+  - Sound Effects
   layers:
   - Default
   - TransparentFX

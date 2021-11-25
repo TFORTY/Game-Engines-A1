@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 // References Used:
 // https://docs.unity3d.com/ScriptReference/QueryTriggerInteraction.html
@@ -51,6 +52,10 @@ public class Player : MonoBehaviour
     public Material redMat;
     public Material blueMat;
     public Material yellowMat;
+
+    //Implement Observer pattern action
+    // Code referenced from Parisa's Lecture 4 Videos: https://drive.google.com/file/d/1mKuH4BzcJgqX2wQFOKWYbX6r7i3cS7mQ/view
+    public static event Action is_Dead;
 
     // Start is called before the first frame update
     void Start()
@@ -124,6 +129,13 @@ public class Player : MonoBehaviour
         if (transform.position.y <= -10f)
         {
             SceneManager.LoadScene("LoseScreen");
+
+            //Invoking the Observer pattern
+            //If the player falls below the death barrier, the death action is invoked.
+            is_Dead?.Invoke();
+
+            Debug.Log("Invoked");
+
         }
     }
 
