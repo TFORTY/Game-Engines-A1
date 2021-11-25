@@ -10,6 +10,7 @@ Game Design Patterns Used:
 
 DLLs Used:
 - Random Scale 
+- Random Colour
 
 ### Screenshots:
 ![title](https://user-images.githubusercontent.com/56273569/140430321-a594509a-d9ad-472a-9a36-91cf65815a00.PNG)
@@ -50,6 +51,8 @@ Reference links are also commented in the scripts that they pertain to
 - https://docs.unity3d.com/ScriptReference/Physics.html
 - https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
 - https://docs.unity3d.com/ScriptReference/Coroutine.html
+- https://docs.unity3d.com/ScriptReference/Color.RGBToHSV.html
+- https://docs.unity3d.com/ScriptReference/Color.HSVToRGB.html
 
 #### Some videos watched for reference:
 - https://www.youtube.com/watch?v=E7gmylDS1C4
@@ -65,6 +68,7 @@ Reference links are also commented in the scripts that they pertain to
 #### Labs Referenced:
 - Lab 6 for Object Pool
 - Lab 4 for Singleton Pattern
+- Lab 4 for DLL Implementation in Unity
 - Lab 7 for Dirty Flag Tutorial
 
 ### Disclaimer:
