@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8029646182602904371}
   - component: {fileID: 8029646182602904372}
   - component: {fileID: 8029646182602904373}
+  - component: {fileID: 537043002340255418}
   m_Layer: 0
   m_Name: Crater (3)
   m_TagString: Untagged
@@ -97,6 +98,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &537043002340255418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029646182602904375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b77b7e0cf7dc14cb59eff57ab9fb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.005
 --- !u!1 &8029646182625679477
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +123,7 @@ GameObject:
   - component: {fileID: 8029646182625679473}
   - component: {fileID: 8029646182625679474}
   - component: {fileID: 8029646182625679475}
+  - component: {fileID: 6141704052632378917}
   m_Layer: 0
   m_Name: Crater
   m_TagString: Untagged
@@ -194,6 +209,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6141704052632378917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029646182625679477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b77b7e0cf7dc14cb59eff57ab9fb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.005
 --- !u!1 &8029646182775651183
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +234,7 @@ GameObject:
   - component: {fileID: 8029646182775651179}
   - component: {fileID: 8029646182775651180}
   - component: {fileID: 8029646182775651181}
+  - component: {fileID: 90291744776146831}
   m_Layer: 0
   m_Name: Crater (6)
   m_TagString: Untagged
@@ -291,6 +320,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &90291744776146831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029646182775651183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b77b7e0cf7dc14cb59eff57ab9fb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.005
 --- !u!1 &8029646183908489802
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +345,7 @@ GameObject:
   - component: {fileID: 8029646183908489798}
   - component: {fileID: 8029646183908489799}
   - component: {fileID: 8029646183908489800}
+  - component: {fileID: 9104286751600398924}
   m_Layer: 0
   m_Name: Crater (4)
   m_TagString: Untagged
@@ -388,6 +431,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &9104286751600398924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029646183908489802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b77b7e0cf7dc14cb59eff57ab9fb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.005
 --- !u!1 &8029646184215180989
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +456,7 @@ GameObject:
   - component: {fileID: 8029646184215180985}
   - component: {fileID: 8029646184215180986}
   - component: {fileID: 8029646184215180987}
+  - component: {fileID: 8462132918483702056}
   m_Layer: 0
   m_Name: Crater (1)
   m_TagString: Untagged
@@ -485,6 +542,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8462132918483702056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029646184215180989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b77b7e0cf7dc14cb59eff57ab9fb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.005
 --- !u!1 &8029646184266181646
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +567,7 @@ GameObject:
   - component: {fileID: 8029646184266181642}
   - component: {fileID: 8029646184266181643}
   - component: {fileID: 8029646184266181644}
+  - component: {fileID: 6311236199061908366}
   m_Layer: 0
   m_Name: Crater (2)
   m_TagString: Untagged
@@ -582,6 +653,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6311236199061908366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029646184266181646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b77b7e0cf7dc14cb59eff57ab9fb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.005
 --- !u!1 &8029646184534773159
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +678,7 @@ GameObject:
   - component: {fileID: 8029646184534773155}
   - component: {fileID: 8029646184534773156}
   - component: {fileID: 8029646184534773157}
+  - component: {fileID: 904502932177314640}
   m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
@@ -678,6 +763,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &904502932177314640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029646184534773159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b77b7e0cf7dc14cb59eff57ab9fb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.005
 --- !u!1 &8029646184603197267
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +848,6 @@ MonoBehaviour:
   ySpeed: 20
   zSpeed: 10
   moveSpeed: 10
-  screenOffset: 50
 --- !u!1 &8029646184628079058
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +860,7 @@ GameObject:
   - component: {fileID: 8029646184628079054}
   - component: {fileID: 8029646184628079055}
   - component: {fileID: 8029646184628079056}
+  - component: {fileID: 6682428132986875680}
   m_Layer: 0
   m_Name: Crater (5)
   m_TagString: Untagged
@@ -848,3 +946,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6682428132986875680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029646184628079058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b77b7e0cf7dc14cb59eff57ab9fb81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  increment: 0.005
