@@ -53,6 +53,7 @@ Reference links are also commented in the scripts that they pertain to
 - https://docs.unity3d.com/ScriptReference/Coroutine.html
 - https://docs.unity3d.com/ScriptReference/Color.RGBToHSV.html
 - https://docs.unity3d.com/ScriptReference/Color.HSVToRGB.html
+- https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html
 
 #### Some videos watched for reference:
 - https://www.youtube.com/watch?v=E7gmylDS1C4
@@ -69,6 +70,7 @@ Reference links are also commented in the scripts that they pertain to
 - Lab 6 for Object Pool
 - Lab 4 for Singleton Pattern
 - Lab 4 for DLL Implementation in Unity
+- Lab 4 for Observer Pattern
 - Lab 7 for Dirty Flag Tutorial
 
 ### Disclaimer:
