@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6638346292415454910}
   - component: {fileID: 6638346292415454909}
   - component: {fileID: 6638346292415454908}
-  - component: {fileID: -962033056252990483}
   - component: {fileID: -2922698958095848224}
   m_Layer: 3
   m_Name: Blue Platform
@@ -100,21 +99,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-962033056252990483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6638346292415454906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c88cba90fd391b4cbba0adb6957ff7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mat1: {fileID: 2100000, guid: b53edb4585749374d9128496af29286d, type: 2}
-  mat2: {fileID: 2100000, guid: 47a9f970d4bc0014289778bff2190651, type: 2}
-  duration: 2
 --- !u!114 &-2922698958095848224
 MonoBehaviour:
   m_ObjectHideFlags: 0
