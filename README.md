@@ -19,7 +19,7 @@ DLLs Used:
 ![tut](https://user-images.githubusercontent.com/56273569/140430340-59ce2927-9a70-4b75-8d1c-cf62f4affc8e.PNG)
 ![game](https://user-images.githubusercontent.com/56273569/140430348-d6edc4ab-faa6-4542-93d6-39549a51406f.PNG)
 
-### Link to Video: 
+### Link to Video: https://youtu.be/9vsHp8MIvNs
 
 ### Development Team:
 - Ehren Chan 100753167
