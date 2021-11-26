@@ -32,7 +32,7 @@ public class ChangeColor : MonoBehaviour
 
         Color.RGBToHSV(currentMaterial.color, out H, out S, out V);
 
-        currentMaterial.color = Color.HSVToRGB(incrementFloatValue(H, 0.01f, 1.0f), S, V);
+        currentMaterial.color = Color.HSVToRGB(incrementFloatValue(H, increment, 1.0f), S, V);
 
         Invoke("changeColor", 0.1f);
 
